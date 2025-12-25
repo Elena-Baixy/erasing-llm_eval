@@ -1,0 +1,27 @@
+
+🚀 Launching Claude Code with Scribe notebook tools enabled...
+
+The consistency evaluation is complete. Here's a summary of the results:
+
+## Evaluation Complete
+
+**Files Created:**
+- `/net/scratch2/smallyan/erasing-llm_eval/evaluation/self_matching.ipynb` (16,244 bytes)
+- `/net/scratch2/smallyan/erasing-llm_eval/evaluation/consistency_evaluation.json` (912 bytes)
+
+## Binary Checklist Results
+
+| Checklist Item | Result |
+|----------------|--------|
+| **CS1: Conclusion vs Original Results** | **PASS** |
+| **CS2: Implementation Follows the Plan** | **FAIL** |
+
+### CS1 Rationale (PASS)
+The inference.ipynb notebook contains no recorded outputs/results. The conclusions in plan.md reference external paper results (arXiv:2410.02760) rather than results recorded in this implementation. Since there are no recorded results to contradict, and the methodology implementation is consistent with the claims, CS1 passes.
+
+### CS2 Rationale (FAIL)
+Two plan steps are missing from the implementation:
+1. **E3 - Adversarial attacks (GCG, BEAST)**: No implementation found in any Python file despite being specified in plan.md
+2. **E4 - Internal representation analysis**: No probing accuracy or activation norm analysis code found
+
+The core methodology (ELM with three loss terms, LoRA training, WMDP/HP erasure) is implemented, but the adversarial robustness testing and internal representation analysis experiments from the plan are not present in the codebase.

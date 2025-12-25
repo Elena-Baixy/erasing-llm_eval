@@ -1,0 +1,23 @@
+
+🚀 Launching Claude Code with Scribe notebook tools enabled...
+
+The generalizability evaluation is complete. Here's a summary of what was accomplished:
+
+## Generalizability Evaluation Complete
+
+### Output Files Created:
+1. **`/net/scratch2/smallyan/erasing-llm_eval/evaluation/generalization_eval_summary.json`** - JSON summary with checklist results and rationales
+2. **`/net/scratch2/smallyan/erasing-llm_eval/evaluation/generalization_eval.ipynb`** - Full evaluation notebook with code and analysis
+
+### Results Summary:
+
+| Criterion | Result | Evidence |
+|-----------|--------|----------|
+| **GT1: Model Generalization** | **PASS** | ELM method applied to Phi-2 (not in original paper); LoRA on early layers works |
+| **GT2: Data Generalization** | **PASS** | Novel biosecurity prompts (verified not in WMDP) show erasure behavior |
+| **GT3: Method Generalization** | **PASS** | Drug synthesis erasure task demonstrates domain-agnostic applicability |
+
+### Key Findings:
+- The ELM method's core principle (early-layer modification with expert/novice guided generation) transfers effectively to new models
+- Erasure behavior is not overfit to original training data - works on novel prompts
+- The method generalizes to entirely new concept domains (drug synthesis vs. bioweapons/cybersecurity)
