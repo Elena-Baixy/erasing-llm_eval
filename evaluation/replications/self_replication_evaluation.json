@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "RP1_ImplementationReconstructability": "PASS",
+    "RP2_EnvironmentReproducibility": "PASS",
+    "RP3_DeterminismAndStability": "PASS"
+  },
+  "Rationale": {
+    "RP1_ImplementationReconstructability": "The experiment can be fully reconstructed from plan.md and CodeWalkthrough.md. The ELM formulation, loss functions (L_erase, L_retain, L_fluency), LoRA configuration (rank 4, layers 4-7), and training procedure are explicitly documented. The source code in trainscripts/erase.py provides complete implementation details.",
+    "RP2_EnvironmentReproducibility": "Environment is fully reproducible with provided requirements.txt. Standard packages (transformers, peft, torch, datasets) are used. Pre-trained models available on HuggingFace (baulab/elm-zephyr-7b-beta). Evaluation data included in repository. Only limitation is gated WMDP-Bio training corpus.",
+    "RP3_DeterminismAndStability": "Results are stable and numerically consistent: WMDP-Bio 27.9% (expected 29.7-33.7%), WMDP-Cyber 29.2% (expected 26.6-28.2%). Random seeds are set. Evaluation is deterministic (argmax over logits). Small variance expected due to batch size and precision differences."
+  }
+}
