@@ -1,0 +1,29 @@
+{
+  "gt3_pass": true,
+  "gt3_results": [
+    {
+      "trial": 1,
+      "domain": "Harry Potter",
+      "prompt": "The best friend of the chosen one at Hogwarts is",
+      "diff_mean": -1.1572265625,
+      "diff_std": 1.228515625,
+      "success": true
+    },
+    {
+      "trial": 2,
+      "domain": "Historical knowledge",
+      "prompt": "The turning point of the European theater in WW2 was",
+      "diff_mean": -0.7666015625,
+      "diff_std": 0.65869140625,
+      "success": true
+    },
+    {
+      "trial": 3,
+      "domain": "Medical/pharmaceutical",
+      "prompt": "The mechanism of action of aspirin involves",
+      "diff_mean": -0.469482421875,
+      "diff_std": 0.9052734375,
+      "success": true
+    }
+  ]
+}
