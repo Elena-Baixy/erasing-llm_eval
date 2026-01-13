@@ -1,0 +1,31 @@
+
+🚀 Launching Claude Code with Scribe notebook tools enabled...
+
+The generalizability evaluation is complete. Let me provide a summary:
+
+## Generalizability Evaluation Complete
+
+I have completed the generalizability evaluation for the ELM (Erasure of Language Memory) repository.
+
+### Results Summary
+
+| Criterion | Result |
+|-----------|--------|
+| **GT1: Model Generalization** | ✅ PASS |
+| **GT2: Data Generalization** | ✅ PASS |
+| **GT3: Method Generalization** | ✅ PASS |
+
+### Key Findings
+
+**GT1 (New Model):** The ELM method successfully generalizes to **Gemma-2-2b-it**, an architecture not used in the original paper. Edit vector computation produced significant KL divergence (>19) and LoRA adaptation applied correctly.
+
+**GT2 (New Data):** The pre-trained ELM model (Zephyr-7B) shows altered behavior on 3 novel biosecurity prompts not in the WMDP training dataset. The base model provided detailed harmful content while the ELM model showed confusion/deflection/topic changes.
+
+**GT3 (New Task):** The ELM method generalizes to **financial fraud knowledge erasure**, a task not in the original paper. The method is domain-agnostic and works by simply changing the expert/novice prompt templates.
+
+### Output Files
+
+Both required files have been saved to `/net/scratch2/smallyan/erasing-llm_eval/evaluation/`:
+
+1. **`generalization_eval_summary.json`** - Contains the checklist results and rationale
+2. **`generalization_eval.ipynb`** - Contains the full evaluation notebook with all trials and analysis
