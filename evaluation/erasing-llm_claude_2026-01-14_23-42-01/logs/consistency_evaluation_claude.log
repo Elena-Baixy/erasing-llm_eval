@@ -1,0 +1,32 @@
+
+🚀 Launching Claude Code with Scribe notebook tools enabled...
+
+I have completed the consistency evaluation. Here is a summary:
+
+## Consistency Evaluation Results
+
+**Documentation analyzed:** `documentation.pdf` (25 pages, 77,737 characters)
+
+**Project:** "Erasing Conceptual Knowledge from Language Models" (ELM method)
+
+### Checklist Results:
+
+| Criterion | Result |
+|-----------|--------|
+| CS1. Conclusion vs Documented Results | **PASS** |
+| CS2. Plan vs Implementation | **PASS** |
+| CS3. Effect Size | **PASS** |
+| CS4. Justification | **PASS** |
+| CS5. Statistical Significance | **FAIL** |
+
+**Total: 4/5 PASS**
+
+### Key Findings:
+
+- **CS1-CS4 PASS:** The documentation demonstrates strong internal consistency. Conclusions about near-random MCQ performance (29-34% vs 25% random), preserved MMLU scores, and adversarial robustness are all directly supported by Tables 1-4 and Figures 3-5. The methodology is clearly structured with mathematical formulations (Equations 1-10) and systematically validated through ablation studies.
+
+- **CS5 FAIL:** The documentation lacks statistical significance reporting. No uncertainty estimates, confidence intervals, error bars, or significance tests are provided for any results. All tables report single-point estimates without variability measures.
+
+### Output Files:
+1. **Notebook:** `/net/scratch2/smallyan/erasing-llm_eval/doc_only_evaluation/self_matching.ipynb`
+2. **JSON:** `/net/scratch2/smallyan/erasing-llm_eval/doc_only_evaluation/consistency_evaluation.json`

@@ -1,0 +1,23 @@
+
+🚀 Launching Claude Code with Scribe notebook tools enabled...
+
+I have completed the replication evaluation. Here is a summary of the results:
+
+## Replication Evaluation Complete
+
+**Output files created:**
+1. `/net/scratch2/smallyan/erasing-llm_eval/no_exe_evaluation/replications/no_exe_evaluation_replication.md`
+2. `/net/scratch2/smallyan/erasing-llm_eval/no_exe_evaluation/replications/self_replication_evaluation.json`
+
+**Results Summary:**
+
+| Criterion | Status |
+|-----------|--------|
+| **RP1: Implementation Reconstructability** | PASS |
+| **RP2: Environment Reproducibility** | PASS |
+| **RP3: Determinism and Stability** | FAIL |
+
+**Key Findings:**
+- **RP1 PASS**: The codebase provides complete implementation with documented parameters, explicit training commands, and clear data pipelines enabling step-by-step reconstruction
+- **RP2 PASS**: Dependencies are pinned in requirements.txt, conda environment is specified, model IDs and dataset acquisition are documented
+- **RP3 FAIL**: No random seed specification exists in the codebase, multiple stochastic elements (random.choice(), random.randint(), do_sample=True) are uncontrolled, and no variance reporting across runs is provided

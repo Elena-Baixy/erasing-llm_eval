@@ -1,0 +1,25 @@
+
+🚀 Launching Claude Code with Scribe notebook tools enabled...
+
+I have completed the generalization evaluation for the **erasing-llm_eval** repository. Here's a summary:
+
+## Evaluation Results
+
+| Criterion | Result |
+|-----------|--------|
+| **GT1: Model Generalization** | FAIL |
+| **GT2: Data Generalization** | FAIL |
+| **GT3: Method Generalization** | FAIL |
+
+### Key Findings
+
+**GT1 (Model):** The repository demonstrates empirical performance across 7 model architectures but provides no mechanistic explanation for why the self-classification mechanism should transfer. No discussion of architectural invariances or universal properties.
+
+**GT2 (Data):** Method validated across 3 domains (biosecurity, cybersecurity, literary) but no explicit assumptions or conditions for generalization to unseen data. Acknowledged limitations without scope definition.
+
+**GT3 (Method):** Novel ELM method proposed with ablation validation, but no explicit applicability framework - no characterization of erasable concept types or conditions for method success.
+
+### Output Files Created
+
+1. **Notebook:** `/net/scratch2/smallyan/erasing-llm_eval/no_exe_evaluation/generalization_eval.ipynb` (17,026 bytes)
+2. **JSON Summary:** `/net/scratch2/smallyan/erasing-llm_eval/no_exe_evaluation/generalization_eval_summary.json` (1,809 bytes)
